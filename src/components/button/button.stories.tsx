@@ -25,3 +25,9 @@ export const Secondary: Story = {
     variant: 'secondary',
   },
 };
+
+export const Desctructive: Story = {
+  args: {
+    variant: 'destructive',
+  },
+};
