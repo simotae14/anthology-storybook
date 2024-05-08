@@ -7,6 +7,13 @@ const meta = {
   component: Button,
   args: {
     children: 'Button',
+    disabled: false,
+  },
+  argTypes: {
+    disabled: { 
+      control: 'boolean',
+      description: 'Disables the button',
+    },
   },
 } satisfies Meta;
 
