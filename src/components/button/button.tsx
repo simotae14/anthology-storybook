@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react';
+import clsx from 'clsx';
 
 import styles from './button.module.css';
 
@@ -7,9 +8,10 @@ export type ButtonProps = ComponentProps<'button'> & {
 };
 
 export const Button = ({ variant, ...props }: ButtonProps) => {
-  let className = styles.button;
-  if (variant === 'secondary') className += ` ${styles.secondary}`;
-  if (variant === 'destructive') className += ` ${styles.destructive}`;
+  let className = clsx(styles.button, {
+    [styles.secondary]: variant === 'secondary',
+    [styles.destructive]: variant === 'destructive',
+  });
   
   return <button className={className} {...props} />;
 };
