@@ -8,10 +8,7 @@ export type ButtonProps = ComponentProps<'button'> & {
 };
 
 export const Button = ({ variant, className, ...props }: ButtonProps) => {
-  let classes = clsx(styles.button, {
-    [styles.variant],
-    className,
-  });
+  let classes = clsx(styles.button, styles[variant], className);
   
-  return <button className={classes} {...props} />;
+  return <button {...props} className={classes} />;
 };
