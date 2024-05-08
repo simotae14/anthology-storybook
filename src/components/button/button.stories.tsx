@@ -14,6 +14,9 @@ const meta = {
       control: 'boolean',
       description: 'Disables the button',
     },
+    variant: {
+      control: 'select',
+    },
   },
 } satisfies Meta;
 
